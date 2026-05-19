@@ -1,0 +1,53 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Xcode user-specific
+**/xcuserdata/
+**/*.xcuserstate
+**/*.xcscmblueprint
+**/*.xccheckout
+
+# Xcode build output
+build/
+DerivedData/
+*.xcarchive
+
+# Swift Package Manager
+.swiftpm/
+.build/
+Packages/
+Package.resolved
+
+# CocoaPods (not used, but in case it ever is)
+Pods/
+
+# Carthage (likewise)
+Carthage/Build/
+
+# fastlane (likewise)
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots/**/*.png
+fastlane/test_output
+
+# Release-time artefacts
+*.dmg
+*.zip
+*.app
+icon_1024.png
+
+# Editor / IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Sparkle private key — NEVER commit this
+sparkle_ed_private_key
+*.pem
+
+# Notarization credentials
+.notarytool/
