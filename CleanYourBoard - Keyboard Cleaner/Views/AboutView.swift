@@ -69,7 +69,6 @@ struct AboutView: View {
         }
         .padding(28)
         .frame(width: 380)
-        .background(Color(nsColor: .windowBackgroundColor))
     }
 
     private var iconView: some View {

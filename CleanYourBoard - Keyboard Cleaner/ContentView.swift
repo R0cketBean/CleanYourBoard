@@ -25,7 +25,6 @@ struct ContentView: View {
         }
         .padding(28)
         .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .background(Color(nsColor: .windowBackgroundColor))
         .animation(.smooth(duration: 0.4), value: lockManager.isLocked)
         .animation(.smooth(duration: 0.3), value: lockManager.hasAccessibilityPermission)
         .onChange(of: scenePhase) { _, phase in
