@@ -1,0 +1,33 @@
+<?xml version="1.0" standalone="yes"?>
+<rss xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     version="2.0">
+  <channel>
+    <title>CleanYourBoard</title>
+    <link>https://github.com/R0cketBean/CleanYourBoard</link>
+    <description>Update feed for CleanYourBoard.</description>
+    <language>en</language>
+
+    <!--
+      Releases will be appended here. See RELEASE.md in the main branch for
+      the per-release workflow.
+
+      Each <item> entry follows this shape:
+
+      <item>
+        <title>Version X.Y.Z</title>
+        <pubDate>RFC822 date</pubDate>
+        <sparkle:version>buildNumber</sparkle:version>
+        <sparkle:shortVersionString>X.Y.Z</sparkle:shortVersionString>
+        <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+        <description><![CDATA[ <ul><li>What changed</li></ul> ]]></description>
+        <enclosure
+          url="https://github.com/R0cketBean/CleanYourBoard/releases/download/vX.Y.Z/CleanYourBoard-X.Y.Z.dmg"
+          sparkle:edSignature="..."
+          length="bytes"
+          type="application/octet-stream"/>
+      </item>
+    -->
+
+  </channel>
+</rss>
