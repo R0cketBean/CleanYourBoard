@@ -88,6 +88,12 @@ final class KeyboardLockManager {
         uninstallEventTap()
         cancelUnlockProgress()
         isLocked = false
+
+        // Increment lifetime unlock counter — used by the rating prompt
+        // to decide when to ask the user to star the repo.
+        let key = "totalUnlocks"
+        let current = UserDefaults.standard.integer(forKey: key)
+        UserDefaults.standard.set(current + 1, forKey: key)
     }
 
     func toggle() {

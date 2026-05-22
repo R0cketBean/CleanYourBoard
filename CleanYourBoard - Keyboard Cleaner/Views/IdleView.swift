@@ -7,6 +7,12 @@ import SwiftUI
 
 struct IdleView: View {
     @Environment(KeyboardLockManager.self) private var lockManager
+    @AppStorage("totalUnlocks") private var totalUnlocks: Int = 0
+    @AppStorage("ratingPromptShown") private var ratingPromptShown: Bool = false
+
+    @State private var showRatingPrompt = false
+
+    private let ratingThreshold = 3
 
     var body: some View {
         VStack(spacing: 28) {
@@ -43,6 +49,20 @@ struct IdleView: View {
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .transition(.opacity)
+        .onAppear(perform: maybeShowRatingPrompt)
+        .sheet(isPresented: $showRatingPrompt) {
+            RatingPromptSheet()
+        }
+    }
+
+    private func maybeShowRatingPrompt() {
+        guard !ratingPromptShown,
+              totalUnlocks >= ratingThreshold else { return }
+        ratingPromptShown = true
+        // Tiny delay so the sheet doesn't fight the idle-view transition.
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) {
+            showRatingPrompt = true
+        }
     }
 }
 
@@ -89,5 +109,4 @@ private struct HintLine: View {
         .environment(KeyboardLockManager())
         .frame(width: 460, height: 560)
         .padding(28)
-        .background(Color(nsColor: .windowBackgroundColor))
 }
