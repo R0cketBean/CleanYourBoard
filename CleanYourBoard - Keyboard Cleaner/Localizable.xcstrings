@@ -2,7 +2,16 @@
   "sourceLanguage" : "en",
   "strings" : {
     "About CleanYourBoard" : {
-
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : { "stringUnit" : { "state" : "translated", "value" : "Über CleanYourBoard" } },
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "About CleanYourBoard" } },
+        "es" : { "stringUnit" : { "state" : "translated", "value" : "Acerca de CleanYourBoard" } },
+        "fr" : { "stringUnit" : { "state" : "translated", "value" : "À propos de CleanYourBoard" } },
+        "it" : { "stringUnit" : { "state" : "translated", "value" : "Informazioni su CleanYourBoard" } },
+        "ja" : { "stringUnit" : { "state" : "translated", "value" : "CleanYourBoard について" } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "关于 CleanYourBoard" } }
+      }
     },
     "Accessibility access required" : {
       "extractionState" : "manual",
@@ -287,10 +296,23 @@
       }
     },
     "Check for updates" : {
-
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : { "stringUnit" : { "state" : "translated", "value" : "Nach Updates suchen" } },
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Check for updates" } },
+        "es" : { "stringUnit" : { "state" : "translated", "value" : "Buscar actualizaciones" } },
+        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Rechercher les mises à jour" } },
+        "it" : { "stringUnit" : { "state" : "translated", "value" : "Verifica aggiornamenti" } },
+        "ja" : { "stringUnit" : { "state" : "translated", "value" : "アップデートを確認" } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "检查更新" } }
+      }
     },
     "CleanYourBoard" : {
-
+      "extractionState" : "manual",
+      "shouldTranslate" : false,
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "CleanYourBoard" } }
+      }
     },
     "CleanYourBoard needs to restart to switch the language to %@." : {
       "extractionState" : "manual",
@@ -528,7 +550,16 @@
       }
     },
     "GitHub" : {
-
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : { "stringUnit" : { "state" : "translated", "value" : "GitHub" } },
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "GitHub" } },
+        "es" : { "stringUnit" : { "state" : "translated", "value" : "GitHub" } },
+        "fr" : { "stringUnit" : { "state" : "translated", "value" : "GitHub" } },
+        "it" : { "stringUnit" : { "state" : "translated", "value" : "GitHub" } },
+        "ja" : { "stringUnit" : { "state" : "translated", "value" : "GitHub" } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "GitHub" } }
+      }
     },
     "Hold Esc for 3 seconds to unlock" : {
       "extractionState" : "manual",
@@ -1048,7 +1079,16 @@
       }
     },
     "Privacy" : {
-
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : { "stringUnit" : { "state" : "translated", "value" : "Datenschutz" } },
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Privacy" } },
+        "es" : { "stringUnit" : { "state" : "translated", "value" : "Privacidad" } },
+        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Confidentialité" } },
+        "it" : { "stringUnit" : { "state" : "translated", "value" : "Privacy" } },
+        "ja" : { "stringUnit" : { "state" : "translated", "value" : "プライバシー" } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "隐私" } }
+      }
     },
     "Re-check" : {
       "extractionState" : "manual",
@@ -1380,13 +1420,15 @@
       }
     },
     "Version %@ (%@)" : {
+      "extractionState" : "manual",
       "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "Version %1$@ (%2$@)"
-          }
-        }
+        "de" : { "stringUnit" : { "state" : "translated", "value" : "Version %1$@ (%2$@)" } },
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Version %1$@ (%2$@)" } },
+        "es" : { "stringUnit" : { "state" : "translated", "value" : "Versión %1$@ (%2$@)" } },
+        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Version %1$@ (%2$@)" } },
+        "it" : { "stringUnit" : { "state" : "translated", "value" : "Versione %1$@ (%2$@)" } },
+        "ja" : { "stringUnit" : { "state" : "translated", "value" : "バージョン %1$@ (%2$@)" } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "版本 %1$@（%2$@）" } }
       }
     },
     "Waiting bear" : {
