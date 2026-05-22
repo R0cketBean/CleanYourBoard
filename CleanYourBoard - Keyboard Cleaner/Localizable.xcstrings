@@ -1,6 +1,9 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
+    "About CleanYourBoard" : {
+
+    },
     "Accessibility access required" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -283,6 +286,9 @@
         }
       }
     },
+    "Check for updates" : {
+
+    },
     "CleanYourBoard" : {
 
     },
@@ -520,6 +526,9 @@
           }
         }
       }
+    },
+    "GitHub" : {
+
     },
     "Hold Esc for 3 seconds to unlock" : {
       "extractionState" : "manual",
@@ -1038,6 +1047,9 @@
         }
       }
     },
+    "Privacy" : {
+
+    },
     "Re-check" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -1363,6 +1375,16 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "解锁"
+          }
+        }
+      }
+    },
+    "Version %@ (%@)" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Version %1$@ (%2$@)"
           }
         }
       }

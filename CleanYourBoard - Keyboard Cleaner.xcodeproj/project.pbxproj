@@ -6,13 +6,30 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		A1FA74132FBF9605006C1EBC /* Sparkle in Frameworks */ = {isa = PBXBuildFile; productRef = A1FA74122FBF9605006C1EBC /* Sparkle */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		A1DCDA972EF80B6C00101595 /* CleanYourBoard - Keyboard Cleaner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CleanYourBoard - Keyboard Cleaner.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		EC1311E873024D368DEF9792 /* Exceptions for "CleanYourBoard - Keyboard Cleaner" folder in "CleanYourBoard - Keyboard Cleaner" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = A1DCDA962EF80B6C00101595 /* CleanYourBoard - Keyboard Cleaner */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		A1DCDA992EF80B6C00101595 /* CleanYourBoard - Keyboard Cleaner */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				EC1311E873024D368DEF9792 /* Exceptions for "CleanYourBoard - Keyboard Cleaner" folder in "CleanYourBoard - Keyboard Cleaner" target */,
+			);
 			path = "CleanYourBoard - Keyboard Cleaner";
 			sourceTree = "<group>";
 		};
@@ -23,6 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1FA74132FBF9605006C1EBC /* Sparkle in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +83,7 @@
 			);
 			name = "CleanYourBoard - Keyboard Cleaner";
 			packageProductDependencies = (
+				A1FA74122FBF9605006C1EBC /* Sparkle */,
 			);
 			productName = "CleanYourBoard - Keyboard Cleaner";
 			productReference = A1DCDA972EF80B6C00101595 /* CleanYourBoard - Keyboard Cleaner.app */;
@@ -100,6 +119,9 @@
 			);
 			mainGroup = A1DCDA8E2EF80B6C00101595;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				A1FA74112FBF9605006C1EBC /* XCRemoteSwiftPackageReference "Sparkle" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = A1DCDA982EF80B6C00101595 /* Products */;
 			projectDirPath = "";
@@ -264,16 +286,14 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SELECTED_FILES = readonly;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = CleanYourBoard;
-				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
-				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2026 R0cketBean. All rights reserved.";
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = "CleanYourBoard - Keyboard Cleaner/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "de.r0cketbean.cleanyourboard";
+				PRODUCT_BUNDLE_IDENTIFIER = de.r0cketbean.cleanyourboard;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				REGISTER_APP_GROUPS = YES;
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
@@ -298,16 +318,14 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SELECTED_FILES = readonly;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = CleanYourBoard;
-				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
-				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2026 R0cketBean. All rights reserved.";
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = "CleanYourBoard - Keyboard Cleaner/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "de.r0cketbean.cleanyourboard";
+				PRODUCT_BUNDLE_IDENTIFIER = de.r0cketbean.cleanyourboard;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				REGISTER_APP_GROUPS = YES;
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
@@ -341,6 +359,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A1FA74112FBF9605006C1EBC /* XCRemoteSwiftPackageReference "Sparkle" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/sparkle-project/Sparkle";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.9.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A1FA74122FBF9605006C1EBC /* Sparkle */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A1FA74112FBF9605006C1EBC /* XCRemoteSwiftPackageReference "Sparkle" */;
+			productName = Sparkle;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = A1DCDA8F2EF80B6C00101595 /* Project object */;
 }
