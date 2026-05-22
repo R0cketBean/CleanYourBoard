@@ -9,6 +9,7 @@
   <meta property="og:title" content="CleanYourBoard">
   <meta property="og:description" content="Lock your Mac keyboard. Clean it in peace.">
   <meta property="og:type" content="website">
+  <meta property="og:image" content="https://r0cketbean.github.io/CleanYourBoard/screenshots/locked.png">
 
   <style>
     :root {
@@ -17,6 +18,7 @@
       --fg-muted: #6e6e73;
       --accent: #4f7bff;
       --card: #ffffff;
+      --card-border: rgba(0,0,0,.08);
       --bg-1: #eaf3ff;
       --bg-2: #d4e6fd;
     }
@@ -25,6 +27,7 @@
         --fg: #f5f5f7;
         --fg-muted: #a1a1a6;
         --card: #1c1c1e;
+        --card-border: rgba(255,255,255,.08);
         --bg-1: #1a2436;
         --bg-2: #0e1521;
       }
@@ -37,38 +40,35 @@
       color: var(--fg);
       background: linear-gradient(160deg, var(--bg-1), var(--bg-2));
       min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      padding: 48px 24px;
+      padding: 56px 24px 72px;
       text-align: center;
     }
     main {
-      max-width: 640px;
+      max-width: 820px;
       width: 100%;
+      margin: 0 auto;
     }
     .icon {
-      width: 128px;
-      height: 128px;
+      width: 112px;
+      height: 112px;
       filter: drop-shadow(0 18px 40px rgba(0,0,0,.22));
     }
     h1 {
-      margin: 22px 0 8px;
-      font-size: 40px;
+      margin: 20px 0 8px;
+      font-size: 44px;
       font-weight: 600;
       letter-spacing: -0.5px;
     }
     .tagline {
       color: var(--fg-muted);
       font-size: 18px;
-      margin: 0 0 36px;
+      margin: 0 0 32px;
     }
     .cta {
       display: inline-flex;
       align-items: center;
       gap: 10px;
-      padding: 14px 28px;
+      padding: 15px 30px;
       border-radius: 999px;
       background: var(--accent);
       color: white;
@@ -81,6 +81,16 @@
       transform: translateY(-1px);
       box-shadow: 0 14px 36px rgba(79, 123, 255, .48);
     }
+    .hero {
+      margin: 56px auto 0;
+      max-width: 720px;
+    }
+    .hero img {
+      width: 100%;
+      height: auto;
+      border-radius: 18px;
+      box-shadow: 0 30px 60px rgba(0,0,0,.25);
+    }
     .features {
       margin: 56px auto 0;
       display: grid;
@@ -90,7 +100,7 @@
     }
     .features div {
       background: var(--card);
-      border: 1px solid color-mix(in srgb, var(--fg) 10%, transparent);
+      border: 1px solid var(--card-border);
       border-radius: 14px;
       padding: 16px 18px;
       font-size: 14px;
@@ -121,10 +131,17 @@
       ⬇ Download for macOS
     </a>
 
+    <div class="hero">
+      <img src="screenshots/locked.png"
+           alt="CleanYourBoard locked — a friendly bear scrubbing a keyboard with a brush">
+    </div>
+
     <section class="features">
       <div><strong>Blocks everything</strong>F1–F12, brightness, volume and media keys included.</div>
+      <div><strong>Friendly bear</strong>Animated scrubbing so you see the app is working.</div>
       <div><strong>Mouse stays free</strong>Click Unlock anytime — no lock-out by accident.</div>
       <div><strong>Esc to escape</strong>Hold Esc 3 s if your mouse is busy.</div>
+      <div><strong>Display stays awake</strong>No more black screens mid-cleaning.</div>
       <div><strong>Seven languages</strong>EN · DE · FR · ES · IT · JA · 中文</div>
     </section>
 
