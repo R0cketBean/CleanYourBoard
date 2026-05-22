@@ -7,6 +7,7 @@ import AppKit
 import ApplicationServices
 import Combine
 import CoreGraphics
+import IOKit.pwr_mgt
 import Observation
 
 private let kEscapeKeyCode: Int64 = 53
@@ -42,6 +43,7 @@ final class KeyboardLockManager {
     private var runLoopSource: CFRunLoopSource?
     private var escHeldSince: Date?
     private var progressTask: Task<Void, Never>?
+    private var displayWakeAssertion: IOPMAssertionID?
 
     init() {
         refreshAccessibilityState()
@@ -78,6 +80,7 @@ final class KeyboardLockManager {
             lastError = .tapCreationFailed
             return false
         }
+        acquireDisplayWakeAssertion()
         lastError = nil
         isLocked = true
         return true
@@ -86,6 +89,7 @@ final class KeyboardLockManager {
     func unlock() {
         guard isLocked else { return }
         uninstallEventTap()
+        releaseDisplayWakeAssertion()
         cancelUnlockProgress()
         isLocked = false
 
@@ -207,5 +211,30 @@ final class KeyboardLockManager {
         unlockProgress = 0
         progressTask?.cancel()
         progressTask = nil
+    }
+
+    // MARK: - Display wake assertion
+
+    /// Prevents the display from idle-sleeping while the keyboard is locked,
+    /// so a thorough wipe-down doesn't leave the user staring at a black screen.
+    private func acquireDisplayWakeAssertion() {
+        releaseDisplayWakeAssertion()
+        var assertionID: IOPMAssertionID = 0
+        let reason = "CleanYourBoard is blocking the keyboard for cleaning." as CFString
+        let result = IOPMAssertionCreateWithName(
+            kIOPMAssertionTypePreventUserIdleDisplaySleep as CFString,
+            IOPMAssertionLevel(kIOPMAssertionLevelOn),
+            reason,
+            &assertionID
+        )
+        if result == kIOReturnSuccess {
+            displayWakeAssertion = assertionID
+        }
+    }
+
+    private func releaseDisplayWakeAssertion() {
+        guard let id = displayWakeAssertion else { return }
+        IOPMAssertionRelease(id)
+        displayWakeAssertion = nil
     }
 }

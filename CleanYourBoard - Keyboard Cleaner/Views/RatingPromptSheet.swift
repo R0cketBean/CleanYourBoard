@@ -13,17 +13,19 @@ struct RatingPromptSheet: View {
 
     var body: some View {
         VStack(spacing: 22) {
+            // Star with halo — sits at the optical centre of the sheet.
             ZStack {
                 Circle()
-                    .fill(Color.yellow.opacity(0.15))
-                    .frame(width: 88, height: 88)
-                Image(systemName: "star.fill")
-                    .font(.system(size: 40, weight: .semibold))
-                    .foregroundStyle(.yellow)
-            }
-            .padding(.top, 8)
+                    .fill(Color.yellow.opacity(0.18))
+                    .frame(width: 96, height: 96)
 
-            VStack(spacing: 8) {
+                Image(systemName: "star.fill")
+                    .font(.system(size: 42, weight: .semibold))
+                    .foregroundStyle(.yellow)
+                    .offset(y: -1) // optical centre nudge for the star glyph
+            }
+
+            VStack(spacing: 6) {
                 Text("Enjoying CleanYourBoard?")
                     .font(.system(.title2, design: .rounded, weight: .semibold))
                     .multilineTextAlignment(.center)
@@ -32,30 +34,37 @@ struct RatingPromptSheet: View {
                     .font(.system(.callout, design: .rounded))
                     .foregroundStyle(.secondary)
                     .multilineTextAlignment(.center)
+                    .fixedSize(horizontal: false, vertical: true)
             }
+            .frame(maxWidth: .infinity)
 
-            VStack(spacing: 10) {
+            VStack(spacing: 8) {
                 Button {
                     openURL(repoURL)
                     dismiss()
                 } label: {
-                    Label("Star on GitHub", systemImage: "star")
+                    Text("Star on GitHub")
+                        .frame(maxWidth: .infinity)
                 }
-                .buttonStyle(PrimaryActionButtonStyle())
+                .buttonStyle(.borderedProminent)
+                .controlSize(.large)
+                .keyboardShortcut(.defaultAction)
 
-                Button("No thanks") {
+                Button {
                     dismiss()
+                } label: {
+                    Text("No thanks")
+                        .frame(maxWidth: .infinity)
                 }
-                .buttonStyle(.plain)
-                .foregroundStyle(.secondary)
+                .buttonStyle(.bordered)
+                .controlSize(.large)
             }
         }
         .padding(28)
-        .frame(width: 360)
+        .frame(width: 340)
     }
 }
 
 #Preview {
     RatingPromptSheet()
-        .frame(height: 380)
 }
